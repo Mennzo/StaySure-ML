@@ -1,0 +1,113 @@
+{
+  "dataset_rows": 119390,
+  "cancel_rate": 0.3704,
+  "validation_models": [
+    {
+      "model": "Baseline",
+      "accuracy": 0.6296,
+      "precision": 0.0,
+      "recall": 0.0,
+      "f1": 0.0,
+      "roc_auc": 0.5
+    },
+    {
+      "model": "Logistic Regression",
+      "accuracy": 0.7906,
+      "precision": 0.7135,
+      "recall": 0.7264,
+      "f1": 0.7199,
+      "roc_auc": 0.8548
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.8361,
+      "precision": 0.8017,
+      "recall": 0.7407,
+      "f1": 0.77,
+      "roc_auc": 0.9039
+    },
+    {
+      "model": "Gradient Boosting",
+      "accuracy": 0.8371,
+      "precision": 0.8552,
+      "recall": 0.6744,
+      "f1": 0.7541,
+      "roc_auc": 0.9043
+    }
+  ],
+  "selected_model": "Gradient Boosting",
+  "cv_best_auc": 0.9024,
+  "best_params": {
+    "model__max_leaf_nodes": 31,
+    "model__learning_rate": 0.1
+  },
+  "test": {
+    "model": "Gradient Boosting (tuned)",
+    "accuracy": 0.8337,
+    "precision": 0.8523,
+    "recall": 0.6666,
+    "f1": 0.7481,
+    "roc_auc": 0.9029
+  },
+  "confusion_matrix": [
+    [
+      14011,
+      1022
+    ],
+    [
+      2949,
+      5896
+    ]
+  ],
+  "classification_report": {
+    "0": {
+      "precision": 0.826120283018868,
+      "recall": 0.9320162309585578,
+      "f1-score": 0.8758790985528084,
+      "support": 15033.0
+    },
+    "1": {
+      "precision": 0.8522694420352703,
+      "recall": 0.6665912945166761,
+      "f1-score": 0.7480809490579204,
+      "support": 8845.0
+    },
+    "accuracy": 0.83369628947148,
+    "macro avg": {
+      "precision": 0.8391948625270691,
+      "recall": 0.7993037627376169,
+      "f1-score": 0.8119800238053645,
+      "support": 23878.0
+    },
+    "weighted avg": {
+      "precision": 0.8358065763223306,
+      "recall": 0.83369628947148,
+      "f1-score": 0.8285395126460204,
+      "support": 23878.0
+    }
+  },
+  "feature_columns": [
+    "hotel",
+    "lead_time",
+    "arrival_date_month",
+    "stays_in_weekend_nights",
+    "stays_in_week_nights",
+    "adults",
+    "children",
+    "babies",
+    "meal",
+    "market_segment",
+    "distribution_channel",
+    "is_repeated_guest",
+    "previous_cancellations",
+    "previous_bookings_not_canceled",
+    "reserved_room_type",
+    "booking_changes",
+    "deposit_type",
+    "customer_type",
+    "adr",
+    "required_car_parking_spaces",
+    "total_of_special_requests"
+  ],
+  "data_source": "https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-02-11/hotels.csv"
+}
